@@ -35,5 +35,46 @@
   #menu .logo img {
 	height: 40px;
 	width: auto;
+	border-radius: 100px;
   }
+  
+  .about-section {
+	padding: 80px 20px;
+	background-color: #f9f9f9;
+  }
+  
+  .about-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .about-text {
+	flex: 1 1 60%;
+	padding: 20px;
+  }
+  
+  .about-text h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #0077cc;
+  }
+  
+  .about-text p {
+	font-size: 18px;
+	line-height: 1.7;
+	color: #444;
+	
+  }
+  
+  .about-image {
+	flex: 1 1 35%;
+	padding: 20px;
+	text-align: center;
+  }
+  
+ 
   
