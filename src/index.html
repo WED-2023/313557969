@@ -61,7 +61,8 @@
 
 <section id="playlist" class="section playlist-section">
   <div class="container">
-    <h2>My Playlist</h2>
+    <h2>השירים</h2>
+    <p>כנסו ותמכו בערוץ של אמא!</p>
     <div class="video-wrapper">
       <iframe 
         width="100%" 
@@ -77,28 +78,16 @@
 </section>
 
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+<section id="like" class="section like-section">
+  <div class="container text-center">
+    <h2>תנו בלייק❤️</h2>
+    <button id="likeBtn" class="like-button">
+      👍 Like
+    </button>
+    <p id="likeCount">0 Likes</p>
+  </div>
 </section>
+
 
 <section id="qrcoder" class="section">
 <br/>
@@ -183,5 +172,14 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+ <script>
+  let likeCount = 0;
+
+  document.getElementById("likeBtn").addEventListener("click", function () {
+    likeCount++;
+    document.getElementById("likeCount").textContent = `${likeCount} Like${likeCount !== 1 ? "s" : ""}`;
+  });
+</script>
+
 </body>
 </html>
