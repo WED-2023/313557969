@@ -1,3 +1,12 @@
+body{
+	background-color: gray;
+}
+.section h2{
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #0077cc;
+	text-align: center;
+}
 section{
 	    padding: 80px 20px;
 }
@@ -40,11 +49,7 @@ section{
 	width: auto;
 	border-radius: 100px;
   }
-  
-  .about-section {
-	background-color: #f9f9f9;
-  }
-  
+   
   .about-content {
 	display: flex;
 	align-items: center;
@@ -59,12 +64,7 @@ section{
 	padding: 20px;
   }
   
-  .about-text h2 {
-	font-size: 36px;
-	margin-bottom: 20px;
-	color: #0077cc;
-  }
-  
+ 
   .about-text p {
 	font-size: 18px;
 	line-height: 1.7;
@@ -77,17 +77,6 @@ section{
 	padding: 20px;
 	text-align: center;
   }
-
-  .photo-gallery-horizontal {
-	background-color: #fff;
-  }
-  
-  .photo-gallery-horizontal h2 {
-	text-align: right;
-	font-size: 36px;
-	margin-bottom: 20px;
-	color: #0077cc;
-  }
   
   .photo-scroll-container {
 	display: flex;
@@ -95,6 +84,7 @@ section{
 	gap: 20px;
 	padding: 10px;
 	scroll-behavior: smooth;
+	justify-content: center;
   }
   
   .photo-item {
@@ -124,6 +114,22 @@ section{
 	-ms-overflow-style: none;
 	scrollbar-width: none;
   }
+
+  .playlist-section {
+	padding: 80px 20px;
+	text-align: center;
+  }
+  
+  .video-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	overflow: hidden;
+  }
+  
   
   
  
