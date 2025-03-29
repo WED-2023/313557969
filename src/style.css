@@ -4,7 +4,7 @@ body{
 .section h2{
 	font-size: 36px;
 	margin-bottom: 20px;
-	color: #0077cc;
+	color: white;
 	text-align: center;
 }
 section{
@@ -157,7 +157,12 @@ section{
 	color: #444;
   }
   
-  
+  .qr-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
   
  
   
