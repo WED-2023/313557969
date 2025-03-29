@@ -1,6 +1,10 @@
 body{
 	background-color: gray;
 }
+
+section{
+	border: #333;
+}
 .section h2{
 	font-size: 36px;
 	margin-bottom: 20px;

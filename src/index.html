@@ -103,7 +103,7 @@
 
 <section id="spa" class="section qa-section">
   <div class="container">
-    <h2 class="text-center mb-4 text-primary">שאלות ותשובות</h2>
+    <h2>שאלות ותשובות</h2>
 
     <div class="accordion" id="qaAccordion">
 
@@ -144,28 +144,37 @@
 </section>
 
 
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2>צור קשר</h2>
+
+    <form id="contactForm" class="text-end">
+      <div class="mb-3">
+        <label for="email" class="form-label">כתובת אימייל</label>
+        <input type="email" class="form-control" id="email" placeholder="הכנס את האימייל שלך" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">הודעה</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="כתוב כאן את ההודעה שלך" required></textarea>
+      </div>
+
+      <div class="mb-3 d-flex justify-content-end gap-2 position-relative">
+        <div class="dropdown">
+          <button type="button" class="btn btn-light dropdown-toggle" id="emojiBtn" data-bs-toggle="dropdown" aria-expanded="false">
+            😊 הוסף אימוג׳י
+          </button>
+          <ul class="dropdown-menu text-end" id="emojiMenu">
+            <!-- emojis will be dynamically inserted here -->
+          </ul>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">שלח</button>
+      </div>      
+    </form>
+  </div>
 </section>
+
 
 
 <script type="text/javascript">
@@ -189,6 +198,29 @@ $(function(){
     document.getElementById("likeCount").textContent = `${likeCount} Like${likeCount !== 1 ? "s" : ""}`;
   });
 </script>
+<script type ="text/javascript">
+  const emojiList = ['😊', '🎉', '🔥', '💬', '❤️', '👍', '😁', '🌟', '😎', '🙏', '😢', '😂'];
+  const emojiMenu = document.getElementById('emojiMenu');
+  const messageInput = document.getElementById('message');
+
+  // Populate the dropdown with emojis
+  emojiList.forEach(emoji => {
+    const li = document.createElement('li');
+    li.innerHTML = `<button class="dropdown-item" type="button">${emoji}</button>`;
+    li.querySelector('button').addEventListener('click', () => {
+      messageInput.value += emoji + ' ';
+      messageInput.focus();
+    });
+    emojiMenu.appendChild(li);
+  });
+
+  // Optional: Prevent real form submission
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert("ההודעה נשלחה בהצלחה!");
+  });
+</script>
+
 
 </body>
 </html>
