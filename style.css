@@ -6,15 +6,13 @@ body{
 section{
 	border: #333;
 	border-style: double;
+	padding: 80px 20px;
 }
 .section h2{
 	font-size: 36px;
 	margin-bottom: 20px;
 	color: white;
 	text-align: center;
-}
-section{
-	    padding: 80px 20px;
 }
 #menu {
 	position: fixed;
